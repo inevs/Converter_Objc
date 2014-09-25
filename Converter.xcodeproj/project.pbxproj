@@ -13,7 +13,9 @@
 		26381AFF19CB2AA7005884FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26381AFD19CB2AA7005884FF /* Main.storyboard */; };
 		26381B0119CB2AA7005884FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26381B0019CB2AA7005884FF /* Images.xcassets */; };
 		26381B0419CB2AA7005884FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26381B0219CB2AA7005884FF /* LaunchScreen.xib */; };
-		26381B1019CB2AA7005884FF /* ConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26381B0F19CB2AA7005884FF /* ConverterTests.m */; };
+		26E20D1019D4605200E91E90 /* NumberpadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E20D0F19D4605200E91E90 /* NumberpadTest.m */; };
+		360E4B6EFEC4D47AFA8692BD /* HasTargetActionMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E480E4AEDA8D60FC0421D /* HasTargetActionMatcher.m */; };
+		FA5456D2B7B04EA0B3751B45 /* libPods-ConverterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF227E8A19D4BC6BBDC482C /* libPods-ConverterTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DF227E8A19D4BC6BBDC482C /* libPods-ConverterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConverterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F0EB831C3414F049FD4045E /* Pods-ConverterTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConverterTests.xcconfig"; path = "Pods/Pods-ConverterTests.xcconfig"; sourceTree = "<group>"; };
 		26381AF019CB2AA7005884FF /* Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Converter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26381AF419CB2AA7005884FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26381AF519CB2AA7005884FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -39,7 +43,9 @@
 		26381B0319CB2AA7005884FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		26381B0919CB2AA7005884FF /* ConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26381B0E19CB2AA7005884FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26381B0F19CB2AA7005884FF /* ConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConverterTests.m; sourceTree = "<group>"; };
+		26E20D0F19D4605200E91E90 /* NumberpadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberpadTest.m; sourceTree = "<group>"; };
+		360E45D3F906B01AD02D6F80 /* HasTargetActionMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HasTargetActionMatcher.h; sourceTree = "<group>"; };
+		360E480E4AEDA8D60FC0421D /* HasTargetActionMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasTargetActionMatcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5456D2B7B04EA0B3751B45 /* libPods-ConverterTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +73,8 @@
 				26381AF219CB2AA7005884FF /* Converter */,
 				26381B0C19CB2AA7005884FF /* ConverterTests */,
 				26381AF119CB2AA7005884FF /* Products */,
+				1F0EB831C3414F049FD4045E /* Pods-ConverterTests.xcconfig */,
+				E938E3D5E697451B9606F962 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,8 +114,9 @@
 		26381B0C19CB2AA7005884FF /* ConverterTests */ = {
 			isa = PBXGroup;
 			children = (
-				26381B0F19CB2AA7005884FF /* ConverterTests.m */,
 				26381B0D19CB2AA7005884FF /* Supporting Files */,
+				26E20D0F19D4605200E91E90 /* NumberpadTest.m */,
+				360E444FCE8D7D9C9883BF86 /* CustomMatchers */,
 			);
 			path = ConverterTests;
 			sourceTree = "<group>";
@@ -117,6 +127,23 @@
 				26381B0E19CB2AA7005884FF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		360E444FCE8D7D9C9883BF86 /* CustomMatchers */ = {
+			isa = PBXGroup;
+			children = (
+				360E45D3F906B01AD02D6F80 /* HasTargetActionMatcher.h */,
+				360E480E4AEDA8D60FC0421D /* HasTargetActionMatcher.m */,
+			);
+			path = CustomMatchers;
+			sourceTree = "<group>";
+		};
+		E938E3D5E697451B9606F962 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF227E8A19D4BC6BBDC482C /* libPods-ConverterTests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26381B1619CB2AA7005884FF /* Build configuration list for PBXNativeTarget "ConverterTests" */;
 			buildPhases = (
+				999F8CC3992C459A9EAAB179 /* Check Pods Manifest.lock */,
 				26381B0519CB2AA7005884FF /* Sources */,
 				26381B0619CB2AA7005884FF /* Frameworks */,
 				26381B0719CB2AA7005884FF /* Resources */,
+				A1F1F53E5DBD41B9BDD94A66 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,6 +243,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		999F8CC3992C459A9EAAB179 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1F1F53E5DBD41B9BDD94A66 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ConverterTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		26381AEC19CB2AA7005884FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -229,7 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26381B1019CB2AA7005884FF /* ConverterTests.m in Sources */,
+				26E20D1019D4605200E91E90 /* NumberpadTest.m in Sources */,
+				360E4B6EFEC4D47AFA8692BD /* HasTargetActionMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +424,7 @@
 		};
 		26381B1719CB2AA7005884FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F0EB831C3414F049FD4045E /* Pods-ConverterTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -380,6 +444,7 @@
 		};
 		26381B1819CB2AA7005884FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F0EB831C3414F049FD4045E /* Pods-ConverterTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

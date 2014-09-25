@@ -10,6 +10,8 @@
 	[super viewDidLoad];
 }
 
+- (IBAction)buttonTouched:(id)sender {
+}
 
 
 @end
