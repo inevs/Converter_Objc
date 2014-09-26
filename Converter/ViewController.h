@@ -1,7 +1,16 @@
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+extern NSInteger NumberPadTag;
 
-@property (nonatomic, strong) NSArray *currencies;
+@class CalculatorModel;
+
+@interface ViewController : UIViewController
+
+@property (nonatomic, weak) IBOutlet UILabel *displayLabel;
+@property (nonatomic) CalculatorModel *model;
+@property (nonatomic) NSNotificationCenter *notificationCenter;
+
+- (IBAction)buttonTouched:(id)sender;
+
 @end
 

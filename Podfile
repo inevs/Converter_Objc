@@ -4,8 +4,8 @@ target "Converter" do
 
 end
 
-target "ConverterTests", :exclusive => true do
-  pod "OCHamcrest"
-  pod "OCMockito"
+target "ConverterTests" do
+	pod "OCHamcrest"
+	pod "OCMockito"
 end
 

@@ -1,33 +1,39 @@
 #import "ViewController.h"
-#import "ConverterTableViewCell.h"
-#import "Currency.h"
+#import "CalculatorModel.h"
+
+NSInteger NumberPadTag = 200;
 
 @interface ViewController ()
-@property (nonatomic, weak) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	self.currencies = @[
-			[[Currency alloc] initWithName:@"EUR"],
-			[[Currency alloc] initWithName:@"USD"],
-			[[Currency alloc] initWithName:@"GBP"]
-	];
+	[self.notificationCenter addObserver:self selector:@selector(modelChanged) name:ModelChangedNotification object:self.model];
+}
+
+- (NSNotificationCenter*)notificationCenter {
+	if (!_notificationCenter) {
+		_notificationCenter = [NSNotificationCenter defaultCenter];
+	}
+	return _notificationCenter;
+}
+
+- (CalculatorModel *)model {
+	if (!_model) {
+		_model = [[CalculatorModel alloc] init];
+	}
+	return _model;
 }
 
 - (IBAction)buttonTouched:(id)sender {
+	[self.model buttonTouched:sender];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [self.currencies count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	ConverterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ConverterCell"];
-	cell.currency = self.currencies[(NSUInteger) indexPath.row];
-	return cell;
+- (void)modelChanged {
+	self.displayLabel.text = [NSString stringWithFormat:@"%@", self.model.currentValue];
 }
 
 @end
