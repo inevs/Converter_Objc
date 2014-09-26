@@ -13,7 +13,8 @@
 		26381AFF19CB2AA7005884FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26381AFD19CB2AA7005884FF /* Main.storyboard */; };
 		26381B0119CB2AA7005884FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26381B0019CB2AA7005884FF /* Images.xcassets */; };
 		26381B0419CB2AA7005884FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26381B0219CB2AA7005884FF /* LaunchScreen.xib */; };
-		26E20D1019D4605200E91E90 /* NumberpadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E20D0F19D4605200E91E90 /* NumberpadTest.m */; };
+		26DA867019D5A6EC000B9476 /* CalculatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DA866F19D5A6EC000B9476 /* CalculatorModel.m */; };
+		26E20D1019D4605200E91E90 /* ViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E20D0F19D4605200E91E90 /* ViewControllerTest.m */; };
 		360E4B6EFEC4D47AFA8692BD /* HasTargetActionMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E480E4AEDA8D60FC0421D /* HasTargetActionMatcher.m */; };
 		FA5456D2B7B04EA0B3751B45 /* libPods-ConverterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF227E8A19D4BC6BBDC482C /* libPods-ConverterTests.a */; };
 /* End PBXBuildFile section */
@@ -43,7 +44,9 @@
 		26381B0319CB2AA7005884FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		26381B0919CB2AA7005884FF /* ConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26381B0E19CB2AA7005884FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26E20D0F19D4605200E91E90 /* NumberpadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberpadTest.m; sourceTree = "<group>"; };
+		26DA866E19D5A6EC000B9476 /* CalculatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorModel.h; sourceTree = "<group>"; };
+		26DA866F19D5A6EC000B9476 /* CalculatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorModel.m; sourceTree = "<group>"; };
+		26E20D0F19D4605200E91E90 /* ViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTest.m; sourceTree = "<group>"; };
 		360E45D3F906B01AD02D6F80 /* HasTargetActionMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HasTargetActionMatcher.h; sourceTree = "<group>"; };
 		360E480E4AEDA8D60FC0421D /* HasTargetActionMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasTargetActionMatcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +93,7 @@
 		26381AF219CB2AA7005884FF /* Converter */ = {
 			isa = PBXGroup;
 			children = (
+				26381AF319CB2AA7005884FF /* Supporting Files */,
 				26381AF719CB2AA7005884FF /* AppDelegate.h */,
 				26381AF819CB2AA7005884FF /* AppDelegate.m */,
 				26381AFA19CB2AA7005884FF /* ViewController.h */,
@@ -97,7 +101,8 @@
 				26381AFD19CB2AA7005884FF /* Main.storyboard */,
 				26381B0019CB2AA7005884FF /* Images.xcassets */,
 				26381B0219CB2AA7005884FF /* LaunchScreen.xib */,
-				26381AF319CB2AA7005884FF /* Supporting Files */,
+				26DA866E19D5A6EC000B9476 /* CalculatorModel.h */,
+				26DA866F19D5A6EC000B9476 /* CalculatorModel.m */,
 			);
 			path = Converter;
 			sourceTree = "<group>";
@@ -115,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				26381B0D19CB2AA7005884FF /* Supporting Files */,
-				26E20D0F19D4605200E91E90 /* NumberpadTest.m */,
+				26E20D0F19D4605200E91E90 /* ViewControllerTest.m */,
 				360E444FCE8D7D9C9883BF86 /* CustomMatchers */,
 			);
 			path = ConverterTests;
@@ -284,6 +289,7 @@
 				26381AFC19CB2AA7005884FF /* ViewController.m in Sources */,
 				26381AF919CB2AA7005884FF /* AppDelegate.m in Sources */,
 				26381AF619CB2AA7005884FF /* main.m in Sources */,
+				26DA867019D5A6EC000B9476 /* CalculatorModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26E20D1019D4605200E91E90 /* NumberpadTest.m in Sources */,
+				26E20D1019D4605200E91E90 /* ViewControllerTest.m in Sources */,
 				360E4B6EFEC4D47AFA8692BD /* HasTargetActionMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +433,7 @@
 			baseConfigurationReference = 1F0EB831C3414F049FD4045E /* Pods-ConverterTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -447,6 +454,7 @@
 			baseConfigurationReference = 1F0EB831C3414F049FD4045E /* Pods-ConverterTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

@@ -437,6 +437,9 @@
                             <constraint firstItem="c96-fM-Jan" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="yeX-Ec-aeH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="HJc-cT-Jig" id="cen-Hh-qOt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
