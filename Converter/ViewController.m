@@ -14,6 +14,11 @@ NSInteger NumberPadTag = 200;
 	[self.notificationCenter addObserver:self selector:@selector(modelChanged) name:ModelChangedNotification object:self.model];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self modelChanged];
+}
+
 - (NSNotificationCenter*)notificationCenter {
 	if (!_notificationCenter) {
 		_notificationCenter = [NSNotificationCenter defaultCenter];
