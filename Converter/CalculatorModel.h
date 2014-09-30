@@ -1,6 +1,8 @@
 #import <UIKit/UIKit.h>
 
 extern NSString *ModelChangedNotification;
+extern NSInteger PeriodButton;
+extern NSInteger CleanButton;
 
 @interface CalculatorModel : NSObject
 

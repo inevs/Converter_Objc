@@ -58,9 +58,20 @@
 	assertThat(model.currentValue, is(@"12345678"));
 }
 
-- (void)_testUsesDecimalValuesWhenPointTouched {
-	[self touchButtonWithTag:10];
-	
+- (void)testUsesDecimalValuesWhenPeriodTouched {
+	[self touchButtonWithTag:PeriodButton];
+	assertThat(model.currentValue, is(@"0."));
 }
 
+- (void)testPeriodOnlyAppearsOnceWhenMultipleTimesTouched {
+	[self touchButtonWithTag:PeriodButton];
+	[self touchButtonWithTag:PeriodButton];
+	assertThat(model.currentValue, is(@"0."));
+}
+
+- (void)testResetsModelAfterCleanButtonTouched {
+	model.currentValue = @"17.42";
+	[self touchButtonWithTag:CleanButton];
+	assertThat(model.currentValue, is(@"0"));
+}
 @end

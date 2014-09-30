@@ -122,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				26381B0D19CB2AA7005884FF /* Supporting Files */,
-				26E20D0F19D4605200E91E90 /* ViewControllerTest.m */,
 				360E444FCE8D7D9C9883BF86 /* CustomMatchers */,
+				26E20D0F19D4605200E91E90 /* ViewControllerTest.m */,
 				26AF69E019DAB57A00A7C35B /* CalculatorModelTest.m */,
 			);
 			path = ConverterTests;
