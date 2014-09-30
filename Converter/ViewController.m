@@ -38,7 +38,7 @@ NSInteger NumberPadTag = 200;
 }
 
 - (void)modelChanged {
-	self.displayLabel.text = [NSString stringWithFormat:@"%@", self.model.currentValue];
+	self.displayLabel.text = self.model.currentValue;
 }
 
 @end

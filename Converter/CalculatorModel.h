@@ -5,7 +5,7 @@ extern NSString *ModelChangedNotification;
 @interface CalculatorModel : NSObject
 
 @property (nonatomic) NSNotificationCenter *notificationCenter;
-@property (nonatomic) NSNumber *currentValue;
+@property (nonatomic) NSString *currentValue;
 
 - (void)buttonTouched:(id)sender;
 

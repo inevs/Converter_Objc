@@ -7,16 +7,22 @@ NSString *ModelChangedNotification = @"ModelChangeNotification";
 - (instancetype)init {
 	self = [super init];
 	if (self) {
-		_currentValue = @0.0;
+		_currentValue = @"0";
 	}
 	return self;
 }
 
 - (void)buttonTouched:(id)sender {
-	if ([self.currentValue integerValue] < 10000000) {
-		self.currentValue = @([self.currentValue integerValue] * 10 + [sender tag]);
-		[self.notificationCenter postNotificationName:ModelChangedNotification object:self];
+	if ([self.currentValue isEqualToString:@"0"]) {
+		self.currentValue = [NSString stringWithFormat:@"%ld", [sender tag]];
+	} else if ([self.currentValue length] < 8) {
+		self.currentValue = [self appendValue:[sender tag]];
 	}
+	[self.notificationCenter postNotificationName:ModelChangedNotification object:self];
+}
+
+- (NSString *)appendValue:(NSUInteger)value {
+	return [NSString stringWithFormat:@"%@%ld", self.currentValue, value];
 }
 
 -(NSNotificationCenter *)notificationCenter {

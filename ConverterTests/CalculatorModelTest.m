@@ -27,7 +27,7 @@
 }
 
 - (void)testShouldStartWithValueZero {
-	assertThat(model.currentValue, is([NSNumber numberWithDouble:0.0]));
+	assertThat(model.currentValue, is(@"0"));
 }
 
 - (void)testShouldPostNotificationOnChanges {
@@ -41,21 +41,21 @@
 	assertThat(model.notificationCenter, is(notNilValue()));
 }
 
-- (void)testSetsValueToButtonTouched {
+- (void)testIgnoresLeadingZero {
 	[self touchButtonWithTag:1];
-	assertThat(model.currentValue, is(@1));
+	assertThat(model.currentValue, is(@"1"));
 }
 
 - (void)testAppendsButtonTouchesOnCurrentValue {
 	[self touchButtonWithTag:1];
 	[self touchButtonWithTag:2];
-	assertThat(model.currentValue, is(@12));
+	assertThat(model.currentValue, is(@"12"));
 }
 
 - (void)testRestrictsInputTo8Numbers {
-	model.currentValue = @12345678;
+	model.currentValue = @"12345678";
 	[self touchButtonWithTag:9];
-	assertThat(model.currentValue, is(@12345678));
+	assertThat(model.currentValue, is(@"12345678"));
 }
 
 - (void)_testUsesDecimalValuesWhenPointTouched {
