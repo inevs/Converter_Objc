@@ -16,6 +16,7 @@
 		26AF69E119DAB57A00A7C35B /* CalculatorModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AF69E019DAB57A00A7C35B /* CalculatorModelTest.m */; };
 		26DA867019D5A6EC000B9476 /* CalculatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DA866F19D5A6EC000B9476 /* CalculatorModel.m */; };
 		26E20D1019D4605200E91E90 /* ViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E20D0F19D4605200E91E90 /* ViewControllerTest.m */; };
+		360E4071185B6569CB81E74D /* UILabel+AccessibilityFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E42A30455C288ED09B829 /* UILabel+AccessibilityFix.m */; };
 		360E4B6EFEC4D47AFA8692BD /* HasTargetActionMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E480E4AEDA8D60FC0421D /* HasTargetActionMatcher.m */; };
 		FA5456D2B7B04EA0B3751B45 /* libPods-ConverterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF227E8A19D4BC6BBDC482C /* libPods-ConverterTests.a */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,8 @@
 		26DA866E19D5A6EC000B9476 /* CalculatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorModel.h; sourceTree = "<group>"; };
 		26DA866F19D5A6EC000B9476 /* CalculatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorModel.m; sourceTree = "<group>"; };
 		26E20D0F19D4605200E91E90 /* ViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTest.m; sourceTree = "<group>"; };
+		360E4027EB1C4FEA4C5B5E9F /* UILabel+AccessibilityFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+AccessibilityFix.h"; sourceTree = "<group>"; };
+		360E42A30455C288ED09B829 /* UILabel+AccessibilityFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AccessibilityFix.m"; sourceTree = "<group>"; };
 		360E45D3F906B01AD02D6F80 /* HasTargetActionMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HasTargetActionMatcher.h; sourceTree = "<group>"; };
 		360E480E4AEDA8D60FC0421D /* HasTargetActionMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HasTargetActionMatcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +108,8 @@
 				26381B0219CB2AA7005884FF /* LaunchScreen.xib */,
 				26DA866E19D5A6EC000B9476 /* CalculatorModel.h */,
 				26DA866F19D5A6EC000B9476 /* CalculatorModel.m */,
+				360E42A30455C288ED09B829 /* UILabel+AccessibilityFix.m */,
+				360E4027EB1C4FEA4C5B5E9F /* UILabel+AccessibilityFix.h */,
 			);
 			path = Converter;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				26381AF919CB2AA7005884FF /* AppDelegate.m in Sources */,
 				26381AF619CB2AA7005884FF /* main.m in Sources */,
 				26DA867019D5A6EC000B9476 /* CalculatorModel.m in Sources */,
+				360E4071185B6569CB81E74D /* UILabel+AccessibilityFix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

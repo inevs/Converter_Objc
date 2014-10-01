@@ -56,7 +56,7 @@ NSInteger CleanButton = 19;
 }
 
 - (NSString *)valueForButton:(id)sender {
-	return [NSString stringWithFormat:@"%ld", [sender tag]];
+	return [NSString stringWithFormat:@"%ld", (long)[sender tag]];
 }
 
 -(NSNotificationCenter *)notificationCenter {
