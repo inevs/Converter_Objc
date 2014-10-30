@@ -40,7 +40,7 @@ NSInteger CleanButton = 19;
 - (void)appendNumber:(id)button {
 	if ([self.currentValue isEqualToString:@"0"]) {
 		self.currentValue = [self valueForButton:button];
-	} else if ([self.currentValue length] < 8) {
+	} else if ([self.currentValue length] < 12) {
 		self.currentValue = [self appendString:[self valueForButton:button]];
 	}
 }

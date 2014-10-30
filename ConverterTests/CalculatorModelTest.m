@@ -52,10 +52,10 @@
 	assertThat(model.currentValue, is(@"12"));
 }
 
-- (void)testRestrictsInputTo8Numbers {
-	model.currentValue = @"12345678";
-	[self touchButtonWithTag:9];
-	assertThat(model.currentValue, is(@"12345678"));
+- (void)testRestrictsInputTo12Numbers {
+	model.currentValue = @"123456789012";
+	[self touchButtonWithTag:3];
+	assertThat(model.currentValue, is(@"123456789012"));
 }
 
 - (void)testUsesDecimalValuesWhenPeriodTouched {
