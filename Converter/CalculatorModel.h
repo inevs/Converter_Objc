@@ -2,6 +2,8 @@
 
 extern NSString *ModelChangedNotification;
 extern NSInteger PeriodButton;
+extern NSInteger AddButton;
+extern NSInteger EqualButton;
 extern NSInteger CleanButton;
 
 @interface CalculatorModel : NSObject

@@ -2,9 +2,14 @@
 
 NSString *ModelChangedNotification = @"ModelChangeNotification";
 NSInteger PeriodButton = 10;
+NSInteger EqualButton = 11;
+NSInteger AddButton = 12;
 NSInteger CleanButton = 19;
 
-@implementation CalculatorModel
+@implementation CalculatorModel {
+	NSString *_accumulator;
+	BOOL _willEnterNewNumber;
+}
 
 - (instancetype)init {
 	self = [super init];
@@ -20,7 +25,13 @@ NSInteger CleanButton = 19;
 }
 
 - (void)updateModelForButton:(id)sender {
-	if ([sender tag] == CleanButton) {
+	if ([sender tag] == EqualButton) {
+		self.currentValue = [@([self.currentValue floatValue] + [_accumulator floatValue]) stringValue];
+		_willEnterNewNumber = YES;
+	} else if ([sender tag] == AddButton) {
+		_accumulator = self.currentValue;
+		_willEnterNewNumber = YES;
+	} else if ([sender tag] == CleanButton) {
 		[self resetModel];
 	} else if ([sender tag] == PeriodButton) {
 		[self appendPeriod];
@@ -31,6 +42,7 @@ NSInteger CleanButton = 19;
 
 - (void)resetModel {
 	self.currentValue = @"0";
+	_willEnterNewNumber = NO;
 }
 
 - (BOOL)isNumberButton:(id)button {
@@ -38,8 +50,9 @@ NSInteger CleanButton = 19;
 }
 
 - (void)appendNumber:(id)button {
-	if ([self.currentValue isEqualToString:@"0"]) {
+	if (_willEnterNewNumber || [self.currentValue isEqualToString:@"0"]) {
 		self.currentValue = [self valueForButton:button];
+		_willEnterNewNumber = NO;
 	} else if ([self.currentValue length] < 12) {
 		self.currentValue = [self appendString:[self valueForButton:button]];
 	}
