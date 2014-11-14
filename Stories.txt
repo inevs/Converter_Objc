@@ -1,0 +1,74 @@
+----------
+- Vision -
+----------
+Mit dem Converter kann ich einfach und schnell
+einen Geldbetrag von Euro in eine andere Währung
+umrechnen oder umgekehrt. Der Wechselkurs wird dabei
+so aktuell wie möglich aus dem Internet ermittelt.
+
+
+
+----------------------------------
+- Story #1: Eibgabe einer Ziffer -
+----------------------------------
+Wenn ich auf eine der Zahlentasten (0-9) drücke,
+erscheint die entsprechende Ziffer im Display.
+
+----------------------------------------
+- Story #2: Eingabe einer ganzen Zahl  -
+----------------------------------------
+Wenn ich auf mehrere Zahlentasten drücke,
+dann werden die Zahlen hintereinander gehängt.
+Damit kann ich mehrstellige Zahlen eingeben.
+Es ist erstmal erlaubt, dass Nullen am Anfang
+stehen können.
+
+-----------------------------------
+- Story #3: Beschränke die Länge  -
+-----------------------------------
+Wenn 10 Ziffern zu sehen sind,
+ist es nicht mehr möglich,
+weitere Zahlen einzugeben.
+
+----------------------------------
+- Story #4: Keine führende Null  -
+----------------------------------
+Wenn ich mehrfach "0" drücke, werden die Zahlen
+nicht aneinandergehangen, sondern es bleibt "0" im
+Display stehen.
+
+-----------------------------
+- Story #5: Komma eingeben  -
+-----------------------------
+Wenn ich die Komma-Taste drücke, werden die
+nachfolgenden Zahlen hinter dem Komma dargestellt.
+Wenn ich erneut die Komma-Taste drücke,
+passiert nichts.
+
+--------------------------------------
+- Story #6: Löschen der letzten Zahl -
+--------------------------------------
+Wenn ich auf "C" drücke, wird die letzte,
+eingegeben Ziffer gelöscht.
+
+----------------------------------
+- Story #7: Löschen der Eingabe  -
+----------------------------------
+Wenn ich auf "AC" drücke, wird die gesamte Eingabe
+gelöscht und der Rechner damit zurückgesetzt.
+
+----------------------------------------
+- Story #8: Umrechnen der Wechselkurse -
+----------------------------------------
+Wenn ich auf "Convert" drücke, wird der aktuell
+eingegebene Betrag umgerechnet und die neue Währung
+angezeigt. Dabei wird immer zwischen Euro und
+Nicht-Euro gewechselt. Der Wechselkurs wird
+aus dem Netz geladen. Rundungsfehler können vorkommen.
+
+--------------------------------------
+- Story #9: Auswahl der Wechselkurse -
+--------------------------------------
+Wenn ich auf den Settings-Button drücke,
+erhalte ich eine Auswahl verschiedener Währungen,
+von denen ich eine Auswählen kann.

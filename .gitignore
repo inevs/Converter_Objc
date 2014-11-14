@@ -1,2 +1,5 @@
-Converter.xcodeproj/project.xcworkspace/xcshareddata/Converter.xccheckout
-xcuserdata
+xcuserdata/
+build/
+Build/
+test-reports/
+frankified_build/
